@@ -26,7 +26,7 @@ struct DetailTaskView: View {
                     title: "Data de ínicio",
                     text: "\(task.startTime.formattedDate)"
                 )
-                titleAndText(title: "Horário de ínicio", text: "\(task.startTime.formattedHour)")
+                titleAndText(title: "Horário de ínicio", text: "\(task.startTime.formattedHourMinute)")
                 Rectangle()
                     .foregroundStyle(task.isOverdue ? Color.red : Color.green)
                     .frame(width: 50, height: 50)
