@@ -21,7 +21,7 @@ struct TaskView: View {
                     } label: {
                         VStack(alignment: .leading, content: {
                             Text(item.title)
-                            Text("\(item.startTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                            Text("\(item.startTime.formattedDate) - \(item.startTime.formattedHourMinute)")
                         })
                     }
                 }
