@@ -34,32 +34,3 @@ final class TaskModel {
         self.startTime = startTime
     }
 }
-
-
-#warning("Think about this idea, because I need to structure this and think more about which is the best way to do. I use mapper, or the object has him own resposability like the variable 'isOverDue in taskmodel'")
-//
-//struct TaskEntity {
-//    let id: UUID
-//    let title: String
-//    let descriptionTitle: String
-//    let hour: String
-//    let date: String
-//}
-//
-//
-//[TaskModel].map {
-//    return TaskEntity()
-//}
-//
-//object.older
-//
-//
-//
-//[TaskEntity]
-//
-//struct AnotherStruct {
-//    let name: String
-//    let age: String
-//    let phoneNumber: String
-//    let tasks: [TaskModel]
-//}

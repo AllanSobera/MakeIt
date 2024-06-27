@@ -11,7 +11,6 @@ struct DetailTaskView: View {
     @Environment(\.dismiss) var dismiss
     @State private var viewModel: DeleteTaskViewModel = .init()
     private var controller: TaskController = .init()
-    
     private var task: TaskModel
     
     init(task: TaskModel) {
