@@ -25,13 +25,6 @@ struct TasksView: View {
                         })
                     }
                 }
-                .onDelete { data in
-                    Task {
-                        for index in data {
-                            await controller.on(.delete(viewModel, viewModel.state.tasks[index]))
-                        }
-                    }
-                }
             }
             .toolbar {
                 ToolbarItem {

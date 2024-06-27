@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DetailTaskView: View {
+    @Environment(\.dismiss) var dismiss
+    @State private var viewModel: DeleteTaskViewModel = .init()
+    private var controller: TaskController = .init()
     
     private var task: TaskModel
     
@@ -32,8 +35,22 @@ struct DetailTaskView: View {
             }
             .padding(20)
         }
+        .toolbar(content: {
+            ToolbarItem {
+                Button(action: {
+                    Task {
+                        await controller.on(.delete(viewModel, task))
+                    }
+                }, label: {
+                    Label("Remove Item", systemImage: "trash")
+                })
+            }
+        })
         .toolbarTitleDisplayMode(.inline)
         .navigationTitle("Tarefa")
+        .onChange(of: viewModel.state.didDeleteItem) {
+            dismiss()
+        }
     }
     
     private func titleAndText(title: String, text: String) -> some View {

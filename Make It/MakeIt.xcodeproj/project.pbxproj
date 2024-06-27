@@ -29,6 +29,8 @@
 		8501B16D2C2DA038008FFA5D /* TaskRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B16C2C2DA038008FFA5D /* TaskRepositoryProtocol.swift */; };
 		8501B1702C2DA0A2008FFA5D /* TaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B16F2C2DA0A2008FFA5D /* TaskViewModelPresenter.swift */; };
 		8501B1752C2DA772008FFA5D /* AddTaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */; };
+		8501B1802C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B17F2C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift */; };
+		8501B1852C2DE82D008FFA5D /* DeleteTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B1842C2DE82D008FFA5D /* DeleteTaskViewModel.swift */; };
 		85B888392C2B2CC5004591CE /* FetchTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		8501B16C2C2DA038008FFA5D /* TaskRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepositoryProtocol.swift; sourceTree = "<group>"; };
 		8501B16F2C2DA0A2008FFA5D /* TaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModelPresenter.swift; sourceTree = "<group>"; };
 		8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModelPresenter.swift; sourceTree = "<group>"; };
+		8501B17F2C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewModelPresenter.swift; sourceTree = "<group>"; };
+		8501B1842C2DE82D008FFA5D /* DeleteTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewModel.swift; sourceTree = "<group>"; };
 		85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTaskUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,11 +130,10 @@
 		850113CF2C29B0A2007275D7 /* MakeIt */ = {
 			isa = PBXGroup;
 			children = (
+				8501B17C2C2DE715008FFA5D /* Delete */,
+				8501B17B2C2DE2E8008FFA5D /* Task */,
 				8501B1672C2D9E40008FFA5D /* Add */,
 				8501B1592C2C4315008FFA5D /* Core */,
-				8501B1572C2C4275008FFA5D /* Presentation */,
-				8501B1562C2C423A008FFA5D /* DataSource */,
-				8501B1552C2C4231008FFA5D /* Domain */,
 				850113D02C29B0A2007275D7 /* MakeItApp.swift */,
 				850113D62C29B0A3007275D7 /* Assets.xcassets */,
 				850113D82C29B0A3007275D7 /* Preview Content */,
@@ -167,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				850114072C2AFCA8007275D7 /* TaskUseCase.swift */,
-				8501140B2C2B0138007275D7 /* DeleteTaskUseCase.swift */,
 				85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */,
 			);
 			path = UseCase;
@@ -196,13 +198,6 @@
 				850113FD2C29F066007275D7 /* UseCase */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		8501B1562C2C423A008FFA5D /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		8501B1572C2C4275008FFA5D /* Presentation */ = {
@@ -245,7 +240,6 @@
 		8501B1622C2C9E4C008FFA5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8501B1602C2C9D34008FFA5D /* DetailTaskView.swift */,
 				850113D22C29B0A2007275D7 /* TasksView.swift */,
 			);
 			path = Views;
@@ -255,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				8501B16B2C2D9ECB008FFA5D /* Domain */,
-				8501B16A2C2D9EC4008FFA5D /* DataSource */,
 				8501B1692C2D9EAB008FFA5D /* Presentation */,
 			);
 			path = Add;
@@ -268,13 +261,6 @@
 				8501B1652C2D9B4F008FFA5D /* AddTaskViewModel.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		8501B16A2C2D9EC4008FFA5D /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		8501B16B2C2D9ECB008FFA5D /* Domain */ = {
@@ -325,6 +311,66 @@
 				8501140D2C2B01AA007275D7 /* TaskController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8501B17B2C2DE2E8008FFA5D /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				8501B1552C2C4231008FFA5D /* Domain */,
+				8501B1572C2C4275008FFA5D /* Presentation */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		8501B17C2C2DE715008FFA5D /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				8501B1822C2DE7FF008FFA5D /* Presentation */,
+				8501B17D2C2DE754008FFA5D /* Domain */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		8501B17D2C2DE754008FFA5D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8501B1812C2DE7D1008FFA5D /* UseCase */,
+				8501B17E2C2DE75C008FFA5D /* Presentable */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8501B17E2C2DE75C008FFA5D /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				8501B17F2C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		8501B1812C2DE7D1008FFA5D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				8501140B2C2B0138007275D7 /* DeleteTaskUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		8501B1822C2DE7FF008FFA5D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8501B1832C2DE80F008FFA5D /* View */,
+				8501B1842C2DE82D008FFA5D /* DeleteTaskViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8501B1832C2DE80F008FFA5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8501B1602C2C9D34008FFA5D /* DetailTaskView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,11 +515,13 @@
 				8501B1612C2C9D34008FFA5D /* DetailTaskView.swift in Sources */,
 				850114082C2AFCA8007275D7 /* TaskUseCase.swift in Sources */,
 				850113D32C29B0A2007275D7 /* TasksView.swift in Sources */,
+				8501B1802C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift in Sources */,
 				850113D12C29B0A2007275D7 /* MakeItApp.swift in Sources */,
 				8501B1702C2DA0A2008FFA5D /* TaskViewModelPresenter.swift in Sources */,
 				8501B16D2C2DA038008FFA5D /* TaskRepositoryProtocol.swift in Sources */,
 				850114042C29FDD8007275D7 /* TaskRepository.swift in Sources */,
 				8501B1662C2D9B4F008FFA5D /* AddTaskViewModel.swift in Sources */,
+				8501B1852C2DE82D008FFA5D /* DeleteTaskViewModel.swift in Sources */,
 				85B888392C2B2CC5004591CE /* FetchTaskUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,5 +9,4 @@ import Foundation
 
 protocol TaskViewModelPresenter {
     func didFetchTasks(_ data: [TaskModel])
-    func didDeleteTask(_ data: TaskModel)
 }

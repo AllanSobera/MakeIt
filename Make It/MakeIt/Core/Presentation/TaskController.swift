@@ -9,7 +9,7 @@ import Foundation
 
 enum TaskControllerAction {
     case add(AddTaskViewModelPresenter, TaskModel)
-    case delete(TaskViewModelPresenter, TaskModel)
+    case delete(DeleteTaskViewModelPresenter, TaskModel)
     case fetch(TaskViewModelPresenter)
 }
 

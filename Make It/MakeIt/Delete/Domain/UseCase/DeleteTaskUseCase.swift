@@ -11,9 +11,9 @@ final class DeleteTaskUseCase {
     
     @MainActor
     private var repository: TaskRepositoryProtocol = TaskRepository.shared
-    private var presenter: TaskViewModelPresenter
+    private var presenter: DeleteTaskViewModelPresenter
     
-    init(presenter: TaskViewModelPresenter) {
+    init(presenter: DeleteTaskViewModelPresenter) {
         self.presenter = presenter
     }
 }
