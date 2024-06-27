@@ -29,7 +29,6 @@
 		8501B16D2C2DA038008FFA5D /* TaskRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B16C2C2DA038008FFA5D /* TaskRepositoryProtocol.swift */; };
 		8501B1702C2DA0A2008FFA5D /* TaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B16F2C2DA0A2008FFA5D /* TaskViewModelPresenter.swift */; };
 		8501B1752C2DA772008FFA5D /* AddTaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */; };
-		8501B1792C2DAB4E008FFA5D /* AddTaskRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B1782C2DAB4E008FFA5D /* AddTaskRepositoryProtocol.swift */; };
 		85B888392C2B2CC5004591CE /* FetchTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +75,6 @@
 		8501B16C2C2DA038008FFA5D /* TaskRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepositoryProtocol.swift; sourceTree = "<group>"; };
 		8501B16F2C2DA0A2008FFA5D /* TaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModelPresenter.swift; sourceTree = "<group>"; };
 		8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModelPresenter.swift; sourceTree = "<group>"; };
-		8501B1782C2DAB4E008FFA5D /* AddTaskRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskRepositoryProtocol.swift; sourceTree = "<group>"; };
 		85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTaskUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,7 +280,6 @@
 		8501B16B2C2D9ECB008FFA5D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				8501B1772C2DAB3A008FFA5D /* Repository */,
 				8501B1762C2DAA64008FFA5D /* UseCase */,
 				8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */,
 			);
@@ -320,14 +317,6 @@
 				850114092C2AFCF3007275D7 /* AddTaskUseCase.swift */,
 			);
 			path = UseCase;
-			sourceTree = "<group>";
-		};
-		8501B1772C2DAB3A008FFA5D /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				8501B1782C2DAB4E008FFA5D /* AddTaskRepositoryProtocol.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		8501B17A2C2DACAB008FFA5D /* Presentation */ = {
@@ -468,7 +457,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8501B1792C2DAB4E008FFA5D /* AddTaskRepositoryProtocol.swift in Sources */,
 				8501140A2C2AFCF3007275D7 /* AddTaskUseCase.swift in Sources */,
 				8501B1642C2D9204008FFA5D /* AddTaskView.swift in Sources */,
 				8501140C2C2B0138007275D7 /* DeleteTaskUseCase.swift in Sources */,

@@ -9,9 +9,10 @@ import Foundation
 
 @Observable
 class AddTaskViewData {
-    let title: String = ""
-    let description: String = ""
-    let startDate: Date = Date.now
+    var title: String = ""
+    var description: String = ""
+    var startDate: Date = Date.now
+    var hasBeenAdded: Bool = false
 }
 
 @Observable
@@ -21,6 +22,17 @@ final class AddTaskViewModel {
 
 extension AddTaskViewModel: AddTaskViewModelPresenter {
     func didAddTask() {
-        
+        data.hasBeenAdded = true
+    }
+}
+
+extension AddTaskViewModel {
+    func getTaskToAdd() -> TaskModel {
+        return .init(
+            id: UUID(),
+            title: data.title,
+            descriptionTitle: data.description,
+            startTime: data.startDate
+        )
     }
 }
