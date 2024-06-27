@@ -20,7 +20,7 @@ final class TaskViewModel {
 
 extension TaskViewModel: TaskViewModelPresenter {
     func didFetchTasks(_ data: [TaskModel]) {
-        state.tasks = data
+        state.tasks = data.sorted { $0.startTime < $1.startTime }
     }
     
     func didDeleteTask(_ data: TaskModel) {

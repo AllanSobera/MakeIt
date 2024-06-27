@@ -61,7 +61,6 @@ struct AddTaskView: View {
                         .stroke(Color.gray, lineWidth: 1)
                         .frame(maxHeight: axis == .horizontal ? 44 : .infinity)
                 )
-                .keyboardType(.numberPad)
                 .frame(maxWidth: .infinity)
         }
         .frame(

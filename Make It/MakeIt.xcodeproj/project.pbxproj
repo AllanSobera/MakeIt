@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		850113D12C29B0A2007275D7 /* MakeItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850113D02C29B0A2007275D7 /* MakeItApp.swift */; };
-		850113D32C29B0A2007275D7 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850113D22C29B0A2007275D7 /* TasksView.swift */; };
+		850113D32C29B0A2007275D7 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850113D22C29B0A2007275D7 /* TaskView.swift */; };
 		850113D72C29B0A3007275D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850113D62C29B0A3007275D7 /* Assets.xcassets */; };
 		850113DA2C29B0A3007275D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850113D92C29B0A3007275D7 /* Preview Assets.xcassets */; };
 		850113E42C29B0A4007275D7 /* MakeItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850113E32C29B0A4007275D7 /* MakeItTests.swift */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		850113CD2C29B0A2007275D7 /* MakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850113D02C29B0A2007275D7 /* MakeItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItApp.swift; sourceTree = "<group>"; };
-		850113D22C29B0A2007275D7 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		850113D22C29B0A2007275D7 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		850113D62C29B0A3007275D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850113D92C29B0A3007275D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		850113DF2C29B0A4007275D7 /* MakeItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,7 +240,7 @@
 		8501B1622C2C9E4C008FFA5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				850113D22C29B0A2007275D7 /* TasksView.swift */,
+				850113D22C29B0A2007275D7 /* TaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -514,7 +514,7 @@
 				8501B1752C2DA772008FFA5D /* AddTaskViewModelPresenter.swift in Sources */,
 				8501B1612C2C9D34008FFA5D /* DetailTaskView.swift in Sources */,
 				850114082C2AFCA8007275D7 /* TaskUseCase.swift in Sources */,
-				850113D32C29B0A2007275D7 /* TasksView.swift in Sources */,
+				850113D32C29B0A2007275D7 /* TaskView.swift in Sources */,
 				8501B1802C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift in Sources */,
 				850113D12C29B0A2007275D7 /* MakeItApp.swift in Sources */,
 				8501B1702C2DA0A2008FFA5D /* TaskViewModelPresenter.swift in Sources */,

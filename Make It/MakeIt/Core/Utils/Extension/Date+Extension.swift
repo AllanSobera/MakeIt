@@ -8,16 +8,16 @@
 import Foundation
 
 extension Date {
-    /// Date formated to String showing just the hours  with this format  HH:mm:ss
-    var formattedHour: String {
+    /// Date formatted to String showing just the hours  with this format  HH:mm
+    var formattedHourMinute: String {
         get {
             let dateFormat = DateFormatter()
-            dateFormat.dateFormat = "HH:mm:ss"
+            dateFormat.dateFormat = "HH:mm"
             return dateFormat.string(from: self)
         }
     }
     
-    /// Date formated to String showing just the date with this format  dd/MM/yyyy
+    /// Date formatted to String showing just the date with this format  dd/MM/yyyy
     var formattedDate: String {
         get {
             let dateFormat = DateFormatter()

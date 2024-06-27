@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct TasksView: View {
+struct TaskView: View {
     @State private var viewModel = TaskViewModel()
     private let controller = TaskController()
     
@@ -47,5 +47,5 @@ struct TasksView: View {
 }
 
 #Preview {
-    TasksView()
+    TaskView()
 }

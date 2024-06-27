@@ -13,7 +13,7 @@ struct MakeItApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TasksView()
+            TaskView()
         }
     }
 }
