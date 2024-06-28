@@ -31,6 +31,7 @@
 		8501B1752C2DA772008FFA5D /* AddTaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */; };
 		8501B1802C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B17F2C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift */; };
 		8501B1852C2DE82D008FFA5D /* DeleteTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501B1842C2DE82D008FFA5D /* DeleteTaskViewModel.swift */; };
+		85594D622C2EE3B60093F491 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594D612C2EE3B60093F491 /* Navigation.swift */; };
 		85B888392C2B2CC5004591CE /* FetchTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		8501B1742C2DA772008FFA5D /* AddTaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModelPresenter.swift; sourceTree = "<group>"; };
 		8501B17F2C2DE772008FFA5D /* DeleteTaskViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewModelPresenter.swift; sourceTree = "<group>"; };
 		8501B1842C2DE82D008FFA5D /* DeleteTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewModel.swift; sourceTree = "<group>"; };
+		85594D612C2EE3B60093F491 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		85594D9F2C2EF9600093F491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		85B888382C2B2CC5004591CE /* FetchTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTaskUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +133,7 @@
 		850113CF2C29B0A2007275D7 /* MakeIt */ = {
 			isa = PBXGroup;
 			children = (
+				85594D9F2C2EF9600093F491 /* Info.plist */,
 				8501B17C2C2DE715008FFA5D /* Delete */,
 				8501B17B2C2DE2E8008FFA5D /* Task */,
 				8501B1672C2D9E40008FFA5D /* Add */,
@@ -212,6 +216,7 @@
 		8501B1592C2C4315008FFA5D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				85594D602C2EE2DC0093F491 /* Navigation */,
 				8501B17A2C2DACAB008FFA5D /* Presentation */,
 				8501B1722C2DA286008FFA5D /* DataSource */,
 				8501B1712C2DA27C008FFA5D /* Domain */,
@@ -373,6 +378,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		85594D602C2EE2DC0093F491 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				85594D612C2EE3B60093F491 /* Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,6 +525,7 @@
 				8501B15F2C2C7D96008FFA5D /* Date+Extension.swift in Sources */,
 				8501B15B2C2C4326008FFA5D /* UseCaseCreator.swift in Sources */,
 				8501B1752C2DA772008FFA5D /* AddTaskViewModelPresenter.swift in Sources */,
+				85594D622C2EE3B60093F491 /* Navigation.swift in Sources */,
 				8501B1612C2C9D34008FFA5D /* DetailTaskView.swift in Sources */,
 				850114082C2AFCA8007275D7 /* TaskUseCase.swift in Sources */,
 				850113D32C29B0A2007275D7 /* TaskView.swift in Sources */,
@@ -689,7 +703,7 @@
 				DEVELOPMENT_TEAM = 5N4X6WG2SQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MakeIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -718,7 +732,7 @@
 				DEVELOPMENT_TEAM = 5N4X6WG2SQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MakeIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

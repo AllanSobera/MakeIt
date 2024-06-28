@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    @Environment(\.dismiss) var dismiss
     @State private var viewModel = AddTaskViewModel()
     private var controller = TaskController()
     
@@ -41,7 +40,7 @@ struct AddTaskView: View {
         .toolbarTitleDisplayMode(.large)
         .navigationTitle("Adicionar tarefa")
         .onChange(of: viewModel.data.hasBeenAdded) { _, _ in
-            dismiss()
+            Navigation.shared.pop()
         }
     }
     

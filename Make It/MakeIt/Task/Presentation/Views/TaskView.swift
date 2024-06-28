@@ -13,31 +13,31 @@ struct TaskView: View {
     private let controller = TaskController()
     
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(viewModel.state.tasks) { item in
-                    NavigationLink {
-                        DetailTaskView(task: item)
-                    } label: {
-                        VStack(alignment: .leading, content: {
-                            Text(item.title)
-                            Text("\(item.startTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                        })
-                    }
+        List {
+            ForEach(viewModel.state.tasks) { item in
+                Button {
+                    Navigation.shared.push(DetailTaskView(task: item))
+                } label: {
+                    VStack(alignment: .leading, content: {
+                        Text(item.title)
+                            .foregroundStyle(Color.black)
+                        Text("\(item.startTime, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                            .foregroundStyle(Color.black)
+                    })
                 }
             }
-            .toolbar {
-                ToolbarItem {
-                    NavigationLink {
-                        AddTaskView()
-                    } label: {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            .navigationTitle("Tarefas")
-            .toolbarTitleDisplayMode(.inlineLarge)
         }
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    Navigation.shared.push(AddTaskView())
+                } label: {
+                    Label("Add Item", systemImage: "plus")
+                }
+            }
+        }
+        .navigationTitle("Tarefas")
+        .navigationBarTitleDisplayMode(.large)
         .onAppear {
             Task {
                 await controller.on(.fetch(viewModel))
@@ -48,4 +48,12 @@ struct TaskView: View {
 
 #Preview {
     TaskView()
+}
+
+struct Teste: View {
+    var body: some View {
+        VStack {
+            Text("Olá")
+        }
+    }
 }
