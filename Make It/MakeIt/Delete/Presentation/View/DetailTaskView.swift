@@ -46,7 +46,7 @@ struct DetailTaskView: View {
         .toolbarTitleDisplayMode(.inline)
         .navigationTitle("Tarefa")
         .onChange(of: viewModel.state.didDeleteItem) {
-            dismiss()
+            navigation.pop()
         }
     }
     

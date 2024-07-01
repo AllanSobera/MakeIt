@@ -16,7 +16,7 @@ struct TaskView: View {
         List {
             ForEach(viewModel.state.tasks) { item in
                 Button {
-                    Navigation.shared.push(DetailTaskView(task: item))
+                    navigation.push(DetailTaskView(task: item))
                 } label: {
                     VStack(alignment: .leading, content: {
                         Text(item.title)
@@ -30,7 +30,7 @@ struct TaskView: View {
         .toolbar {
             ToolbarItem {
                 Button {
-                    Navigation.shared.push(AddTaskView())
+                    navigation.push(AddTaskView())
                 } label: {
                     Label("Add Item", systemImage: "plus")
                 }
@@ -48,12 +48,4 @@ struct TaskView: View {
 
 #Preview {
     TaskView()
-}
-
-struct Teste: View {
-    var body: some View {
-        VStack {
-            Text("Olá")
-        }
-    }
 }

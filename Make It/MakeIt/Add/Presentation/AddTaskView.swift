@@ -40,7 +40,7 @@ struct AddTaskView: View {
         .toolbarTitleDisplayMode(.large)
         .navigationTitle("Adicionar tarefa")
         .onChange(of: viewModel.data.hasBeenAdded) { _, _ in
-            Navigation.shared.pop()
+            navigation.pop()
         }
     }
     

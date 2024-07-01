@@ -8,8 +8,9 @@
 import UIKit
 import SwiftUI
 
+public var navigation = Navigation.shared
 
-final class Navigation {
+final public class Navigation {
     
     private(set) var rootViewController: UINavigationController?
 
@@ -42,12 +43,13 @@ final class Navigation {
         rootViewController?.viewControllers = [hostingViewController]
     }
     
-    func present(_ view: some View, animated: Bool = true, completion: @escaping (() -> Void)) {
+    func present(_ view: some View, animated: Bool = true, style: UIModalPresentationStyle = .automatic, completion: (() -> Void)? = nil) {
         let hostingViewController = UIHostingController(rootView: view)
+        hostingViewController.modalPresentationStyle = style
         rootViewController?.present(hostingViewController, animated: animated, completion: completion)
     }
     
-    func dismiss(animated: Bool = true, completion: @escaping (() -> Void)) {
+    func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
         rootViewController?.dismiss(animated: animated, completion: completion)
     }
 }
