@@ -18,22 +18,20 @@ struct DetailTaskView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading, spacing: 8) {
-                titleAndText(title: "Título", text: task.title)
-                titleAndText(title: "Descrição", text: task.descriptionTitle)
-                titleAndText(
-                    title: "Data de ínicio",
-                    text: "\(task.startTime.formattedDate)"
-                )
-                titleAndText(title: "Horário de ínicio", text: "\(task.startTime.formattedHourMinute)")
-                Rectangle()
-                    .foregroundStyle(task.isOverdue ? Color.red : Color.green)
-                    .frame(width: 50, height: 50)
-                Spacer()
-            }
-            .padding(20)
+        VStack(alignment: .leading, spacing: 8) {
+            titleAndText(title: "Título", text: task.title)
+            titleAndText(title: "Descrição", text: task.descriptionTitle)
+            titleAndText(
+                title: "Data de ínicio",
+                text: "\(task.startTime.formattedDate)"
+            )
+            titleAndText(title: "Horário de ínicio", text: "\(task.startTime.formattedHourMinute)")
+            Rectangle()
+                .foregroundStyle(task.isOverdue ? Color.red : Color.green)
+                .frame(width: 50, height: 50)
+            Spacer()
         }
+        .padding(20)
         .toolbar(content: {
             ToolbarItem {
                 Button(action: {
