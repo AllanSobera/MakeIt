@@ -17,7 +17,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        let navigation = Navigation.shared
         navigation.setRootView(TaskView())
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigation.rootViewController
